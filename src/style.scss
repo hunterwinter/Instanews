@@ -9,7 +9,8 @@
     font-style: normal;
 }
 
-/*start of stylesheet*/
+/*stylesheet*/
+
 html {
  font-size: 16px;
  color: #ffffff 
@@ -28,9 +29,34 @@ body {
 footer {
  color: #c2c2c2 ;
 }
-/* End of Helper Classes */
 
-/* Header */
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%; }
+
+li {
+  max-width: 25vw;
+  list-style-type: none;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex; }
+
+li a {
+  align-self: flex-end;
+  margin: 0 auto;
+  width: 100%;
+  text-decoration: none;
+  color: #ffffff;
+ 
+
+p {
+  line-height: 40px;
+  font-size: 16px; }
+
+
 header {
 	height: 90vh;
 	display: flex;
