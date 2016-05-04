@@ -5,7 +5,6 @@
   font-weight: normal;
   font-style: normal; }
 
-/*start of stylesheet*/
 html {
   font-size: 16px;
   color: #ffffff; }
@@ -14,72 +13,96 @@ body {
   max-height: 100%;
   background-color: black; }
 
-.loading {
-  height: 20px;
-  display: none; }
-
-footer {
-  color: #c2c2c2; }
-
-/* End of Helper Classes */
-/* Header */
 header {
   height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media (min-width: 600px) {
+    header {
+      flex-direction: row; } }
+  @media (min-width: 1000px) {
+    header {
+      justify-content: flex-start; } }
 
-/* Choose a selector */
+.loading {
+  height: 20px;
+  display: none; }
+
+.append {
+  display: none; }
+
+.grid {
+  width: 100%; }
+
+.picturelist {
+  width: 100%;
+  padding-left: 0; }
+
+ul {
+  display: flex;
+  flex-wrap: wrap; }
+
+li {
+  width: 100vw;
+  list-style-type: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+  display: flex; }
+  @media (min-width: 600px) {
+    li {
+      width: 50vw; } }
+  @media (min-width: 1000px) {
+    li {
+      width: 25vw; } }
+  li a {
+    margin: 0 auto;
+    width: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    height: 450px;
+    display: flex; }
+
+.writing {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 160px;
+  line-height: 20px;
+  text-align: left;
+  padding: 10px, 15px, 15px;
+  width: 100vw;
+  align-self: flex-end; }
+
 .option-menu p {
   padding-top: 0;
   font-size: 0.8rem;
   font-family: "opensans";
   color: white; }
+  @media (min-width: 1000px) {
+    .option-menu p {
+      padding-bottom: 30px; } }
 
-/* Select Button */
 select {
   font-size: 2rem; }
 
-/* Header after headline*/
-.load {
-  height: auto;
-  display: none; }
-
-/* Stories */
 .stories {
   display: none;
   list-style: none; }
 
-/* Footer */
 footer {
+  color: #c2c2c2;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "opensans";
   margin-bottom: 5em; }
+  @media (min-width: 1000px) {
+    footer {
+      justify-content: flex-start;
+      padding-left: 30px; } }
 
-/* Instanews */
 .span {
   text-transform: uppercase; }
-
-/* Tablet Version */
-@media all and (min-width: 600px) {
-  header {
-    flex-direction: row; }
-  .choose {
-    text-align: left;
-    padding: 0 130px 30px 25px; } }
-
-/* Desktop Version */
-@media all and (min-width: 1000px) {
-  header {
-    justify-content: flex-start;
-    padding-left: 30px; }
-  .option-menu {
-    padding-left: 100px;
-    padding-bottom: 30px; }
-  footer {
-    justify-content: flex-start;
-    padding-left: 30px; } }

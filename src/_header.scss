@@ -1,0 +1,25 @@
+//begin header
+header {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        @include desktop {
+            justify-content: flex-start;
+            // padding-left: 30px;
+    
+        }
+}
+
+
+.loading{
+	height: 20px;
+    display: none;
+}
+//ending header

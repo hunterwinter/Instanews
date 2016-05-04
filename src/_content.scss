@@ -1,0 +1,78 @@
+//beginning content
+.append{
+    display: none;
+}
+
+.grid{
+    width: 100%
+}
+
+.picturelist {
+    width: 100%; 
+    padding-left: 0;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    width: 100vw;
+    list-style-type: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 450px;
+    display: flex; 
+
+        @include tablet {
+            width: 50vw;
+        }
+
+        @include desktop {
+            width: 25vw;
+        }
+    
+    a {
+        margin: 0 auto;
+        width: 100%;
+        text-decoration: none;
+        color: $bodies-color;
+        height: 450px;
+        display: flex;
+    }
+}
+
+.writing{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 160px;
+    line-height: 20px;
+    text-align: left;
+    padding: 10px, 15px, 15px;
+    width: 100vw;
+    align-self: flex-end;
+}
+
+.option-menu p{
+    padding-top: 0;
+    font-size: 0.8rem;
+    font-family: "opensans";
+    color: white;
+
+    @include desktop {
+        //padding-left: 100px;
+        padding-bottom: 30px;
+    }
+}
+
+select {
+    font-size: 2rem;
+}
+
+
+.stories {
+    display: none;
+    list-style: none;
+}
+//ending content

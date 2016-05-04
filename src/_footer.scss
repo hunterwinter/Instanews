@@ -1,0 +1,20 @@
+//beginning footer
+footer {
+    color: $footer-color;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "opensans";
+    margin-bottom: 5em;
+
+    @include desktop {
+        justify-content: flex-start;
+        padding-left: 30px;
+    }
+}
+
+.span {
+    text-transform: uppercase;
+}
+//ending footer

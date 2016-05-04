@@ -1,0 +1,32 @@
+//beginning storage & breakpoints
+$background-color: black;
+$bodies-color: #ffffff;
+$font-family: 'opensans', sans-serif;
+$footer-color: #c2c2c2;
+
+$tablet-width: 600px;
+    @mixin tablet {
+        @media (min-width: $tablet-width) {
+            @content;
+        }
+    }
+
+$desktop-width: 1000px;
+    @mixin desktop {
+        @media (min-width: $desktop-width) {
+            @content;
+        }
+    }
+
+
+@font-face {
+    font-family: 'opensans';
+    src: url('../content/fonts/opensans_light/OpenSans-Light-webfont.eot');
+    src: url('../content/fonts/opensans_light/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../content/fonts/opensans_light/OpenSans-Light-webfont.woff') format('woff'),
+         url('../content/fonts/opensans_light/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../content/fonts/opensans_light/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+//ending storage & breakpoints
