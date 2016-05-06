@@ -13,6 +13,7 @@ body {
   max-height: 100%;
   background-color: black; }
 
+
 header {
   height: 90vh;
   display: flex;
@@ -22,12 +23,16 @@ header {
   @media (min-width: 600px) {
     header {
       flex-direction: row; } }
+
   @media (min-width: 1000px) {
     header {
       justify-content: flex-start; } }
 
 .loading {
-  height: 20px;
+  /*Increased the height of the loading image to make it bigger*/
+  height: 50px;
+  /*Added some padding to keep it away from other items on the page*/
+  padding: 40px;
   display: none; }
 
 .append {
@@ -42,8 +47,10 @@ header {
 
 ul {
   display: flex;
-  flex-wrap: wrap; }
-
+  flex-wrap: wrap; 
+  /*Justify content center KM*/
+  justify-content: center;
+  }
 li {
   width: 100vw;
   list-style-type: none;
@@ -54,10 +61,12 @@ li {
   display: flex; }
   @media (min-width: 600px) {
     li {
-      width: 50vw; } }
+      /*Change width to 49vw KM*/
+      width: 49vw; } }
   @media (min-width: 1000px) {
     li {
-      width: 25vw; } }
+      /*Change width to 24vw KM*/
+      width: 24vw; } }
   li a {
     margin: 0 auto;
     width: 100%;
@@ -71,9 +80,14 @@ li {
   height: 160px;
   line-height: 20px;
   text-align: left;
-  padding: 10px, 15px, 15px;
+  /*Changed the padding so it is valid code and functioning*/
+  padding: 10px 15px;
   width: 100vw;
-  align-self: flex-end; }
+  align-self: flex-end;
+  /*Changed font to Open Sans*/
+  font-family: Open Sans;
+
+   }
 
 .option-menu p {
   padding-top: 0;
