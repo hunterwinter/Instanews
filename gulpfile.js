@@ -2,18 +2,20 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
+var babel = require('gulp-babel');
 // This is a very basic Gulp task,
 // with a name and some code to run
 // when this task is called:
 
-gulp.task('default', ['uglify', 'scss', 'browser-sync']);
+gulp.task('default', [/*'uglify',*/'scss','babel', 'browser-sync']);
 
 gulp.task('browser-sync', function() {
    browserSync.init({
-       open: false,
-       proxy: '192.168.33.10/projectDuece'
+       server: {
+        baseDir: './'
+       }
    });
-   gulp.watch('./src/*.js', ['uglify']);
+   gulp.watch('./src/*.js', ['babel']);
    gulp.watch('./src/*.scss', ['scss']);
    gulp.watch(['./build/**/*.*', 'index.html']).on('change', browserSync.reload);
 });
@@ -23,6 +25,15 @@ gulp.task('browser-sync', function() {
   .pipe(sass().on('error', sass.logError))
 	.pipe(gulp.dest('./build'));
 });
+
+  gulp.task('babel', () => {
+    return gulp.src('./src/*.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
+        .pipe(gulp.dest('./build'));
+});
+
 
 	gulp.task('uglify', function(){
 	return gulp.src('./src/*.js') // What files do we want gulp to consume?

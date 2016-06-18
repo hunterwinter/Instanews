@@ -1,9 +1,9 @@
- var $grid = $('.grid');
+    let $grid = $('.grid');
 
 $(document).ready(function() {
  
   $('select').on('change', function() {
-    var sections = $('.sections :selected').val();
+    let sections = $('.sections :selected').val();
   
     $('.append').hide();
 
@@ -14,9 +14,10 @@ $(document).ready(function() {
   $.getJSON('http://api.nytimes.com/svc/topstories/v1/' + sections + '.json?api-key=0bba64eadd85cae4c4718bcca20ce3ab:8:75124074')
   
   .done(function(data) {
-    var results = data.results;
-    var stuff = "";
-    var number = 0;
+    
+    let results = data.results;
+    let stuff = "";
+    let number = 0;
 
     console.log(results);
 
@@ -24,6 +25,7 @@ $(document).ready(function() {
         $('.option-menu').append('<p class="append">No stories found.</p>');
         $('.append').show();
       }
+      
       else{
 
            results = results.filter(function(item) {
@@ -31,9 +33,9 @@ $(document).ready(function() {
           }).splice(0,12);
 
       results.forEach(function(item,  index){
-        var img = item.multimedia[4];
-        var abst = item.abstract;
-        var story = item.url;
+        let img = item.multimedia[4];
+        let abst = item.abstract;
+        let story = item.url;
       
       $('ul').append('<li class= "box-' + index + '"> <a class="text" href="' + story + '"><p class="writing"> ' + abst +'</p></a> </li>');
             

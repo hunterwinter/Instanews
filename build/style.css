@@ -27,8 +27,10 @@ header {
       justify-content: flex-start; } }
 
 .loading {
+  text-align: center;
   height: 20px;
-  display: none; }
+  display: none;
+  padding-top: 1em; }
 
 .append {
   display: none; }
